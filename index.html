@@ -1,8 +1,449 @@
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGwAUnpoJo/dni1xHrbliPR6EO7VSD67w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGwAUnpoJo&#x2F;dni1xHrbliPR6EO7VSD67w&#x2F;view?utm_content=DAGwAUnpoJo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Portafolio Profesional: Ingeniería Mecánica y Desarrollo de Software</a> de Alison Odalys Reyna Montoya
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Ingeniero Mecánico & Desarrollador de Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.1);
+            color: #667eea;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">Portafolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition-colors">Inicio</a>
+                    <a href="#sobre-mi" class="text-gray-600 hover:text-blue-600 transition-colors">Sobre Mí</a>
+                    <a href="#habilidades" class="text-gray-600 hover:text-blue-600 transition-colors">Habilidades</a>
+                    <a href="#proyectos" class="text-gray-600 hover:text-blue-600 transition-colors">Proyectos</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition-colors">Contacto</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <span class="text-4xl">👨‍💻</span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in">
+                Ingeniero Mecánico &<br>
+                <span class="text-yellow-300">Desarrollador de Software</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 fade-in">
+                Fusionando la precisión de la ingeniería con la innovación del desarrollo de software
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <button onclick="scrollToSection('proyectos')" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Ver Proyectos
+                </button>
+                <button onclick="scrollToSection('contacto')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    Contactar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Sobre Mí</h2>
+                <p class="text-xl text-gray-600 fade-in">Profesional dual con experiencia en ingeniería y tecnología</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Mi Historia</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Como ingeniero mecánico, he desarrollado una sólida base en resolución de problemas, análisis técnico y diseño de sistemas. Mi transición al desarrollo de software me ha permitido aplicar esta mentalidad analítica al mundo digital, creando soluciones innovadoras que combinan lo mejor de ambos mundos.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Esta combinación única me permite abordar proyectos desde múltiples perspectivas, desde la optimización de procesos industriales hasta el desarrollo de aplicaciones web modernas.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 fade-in">
+                    <div class="bg-blue-50 p-6 rounded-xl text-center card-hover">
+                        <div class="text-3xl mb-3">⚙️</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Ingeniería Mecánica</h4>
+                        <p class="text-sm text-gray-600">Diseño, análisis y optimización de sistemas mecánicos</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl text-center card-hover">
+                        <div class="text-3xl mb-3">💻</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Desarrollo de Software</h4>
+                        <p class="text-sm text-gray-600">Aplicaciones web, móviles y sistemas empresariales</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl text-center card-hover">
+                        <div class="text-3xl mb-3">🔧</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Automatización</h4>
+                        <p class="text-sm text-gray-600">Integración de hardware y software</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl text-center card-hover">
+                        <div class="text-3xl mb-3">📊</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Análisis de Datos</h4>
+                        <p class="text-sm text-gray-600">Visualización y procesamiento de información</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Habilidades Técnicas</h2>
+                <p class="text-xl text-gray-600 fade-in">Competencias en ambas disciplinas</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Mechanical Engineering Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="text-2xl mr-3">⚙️</span>
+                        Ingeniería Mecánica
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">CAD/CAM (SolidWorks, AutoCAD)</span>
+                                <span class="text-blue-600 font-semibold">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Análisis FEA/CFD</span>
+                                <span class="text-blue-600 font-semibold">88%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Manufactura y Procesos</span>
+                                <span class="text-blue-600 font-semibold">92%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Control de Calidad</span>
+                                <span class="text-blue-600 font-semibold">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-600 h-3 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Development Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <span class="text-2xl mr-3">💻</span>
+                        Desarrollo de Software
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">JavaScript/TypeScript</span>
+                                <span class="text-purple-600 font-semibold">93%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-600 h-3 rounded-full skill-bar" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">React/Node.js</span>
+                                <span class="text-purple-600 font-semibold">89%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-600 h-3 rounded-full skill-bar" style="width: 89%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Python/Machine Learning</span>
+                                <span class="text-purple-600 font-semibold">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-600 h-3 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Bases de Datos/Cloud</span>
+                                <span class="text-purple-600 font-semibold">87%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-600 h-3 rounded-full skill-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="mt-16 text-center fade-in">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8">Tecnologías y Herramientas</h3>
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+                    <div class="tech-icon text-4xl cursor-pointer" title="SolidWorks">🔧</div>
+                    <div class="tech-icon text-4xl cursor-pointer" title="JavaScript">🟨</div>
+                    <div class="tech-icon text-4xl cursor-pointer" title="React">⚛️</div>
+                    <div class="tech-icon text-4xl cursor-pointer" title="Python">🐍</div>
+                    <div class="tech-icon text-4xl cursor-pointer" title="AutoCAD">📐</div>
+                    <div class="tech-icon text-4xl cursor-pointer" title="Git">🌿</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Proyectos Destacados</h2>
+                <p class="text-xl text-gray-600 fade-in">Fusionando ingeniería y desarrollo</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-48 flex items-center justify-center">
+                        <span class="text-6xl">🏭</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sistema de Monitoreo Industrial</h3>
+                        <p class="text-gray-600 mb-4">Aplicación web para monitoreo en tiempo real de equipos industriales con sensores IoT.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">IoT</span>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="bg-gradient-to-r from-green-500 to-blue-600 h-48 flex items-center justify-center">
+                        <span class="text-6xl">⚙️</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Optimizador de Diseño CAD</h3>
+                        <p class="text-gray-600 mb-4">Herramienta de software que automatiza la optimización de diseños mecánicos usando algoritmos genéticos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">SolidWorks API</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">ML</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-48 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">App de Cálculos de Ingeniería</h3>
+                        <p class="text-gray-600 mb-4">Aplicación móvil con calculadoras especializadas para ingenieros mecánicos en campo.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">PWA</span>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                            Ver Proyecto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4 fade-in">¿Listo para Colaborar?</h2>
+            <p class="text-xl mb-12 text-gray-200 fade-in">
+                Combinemos la precisión de la ingeniería con la innovación del software
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-gray-200">contacto@ejemplo.com</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-gray-200">linkedin.com/in/perfil</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">🐙</div>
+                    <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+                    <p class="text-gray-200">github.com/usuario</p>
+                </div>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 fade-in">
+                <h3 class="text-2xl font-bold mb-6">Envíame un Mensaje</h3>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Tu Nombre" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        <input type="email" placeholder="Tu Email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50">
+                    </div>
+                    <input type="text" placeholder="Asunto" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50">
+                    <textarea rows="5" placeholder="Tu Mensaje" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"></textarea>
+                    <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Enviar Mensaje
+                    </button>
+                </form>
+                <p class="text-sm text-gray-300 mt-4">
+                    <strong>Nota:</strong> Este es un formulario de demostración. En una implementación real, se requeriría un backend para procesar los mensajes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2024 Portafolio Profesional. Ingeniero Mecánico & Desarrollador de Software.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation links smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            // Simple mobile menu implementation
+            alert('Menú móvil - En una implementación completa, aquí se mostraría el menú desplegable');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! En una implementación real, esto se enviaría a un servidor.');
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            // Trigger initial fade-in for hero section
+            document.querySelectorAll('#inicio .fade-in').forEach(el => {
+                el.classList.add('visible');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ecaf3847f33262',t:'MTc1NTEzNTAwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
