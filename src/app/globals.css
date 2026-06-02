@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0B0F19;
+  --foreground: #f3f4f6;
+  --green-accent: #2ecc8a;
 }
 
 @theme inline {
@@ -10,17 +11,82 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /*
+   * Registering custom animations as Tailwind v4 theme tokens.
+   * This auto-generates the `animate-spin-slow` and `animate-blob`
+   * utility classes — no manual .class { animation: ... } needed.
+   */
+  --animate-spin-slow: spin-slow 18s linear infinite;
+  --animate-blob: blob 10s ease-in-out infinite alternate;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Keyframes live at the top level, outside @theme */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero-bg {
+  background: radial-gradient(ellipse 80% 60% at 20% 0%, #0d3a20 0%, #0B0F19 55%);
+}
+
+/*
+ * Stagger delays registered as proper Tailwind v4 utilities via @utility.
+ * This ensures they are tree-shaken correctly and apply at the right layer.
+ */
+@utility animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+@utility animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.portfolio-anchor .ant-anchor-link {
+  padding: 0;
+}
+
+.portfolio-anchor .ant-anchor-link-title {
+  color: white !important;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.portfolio-anchor .ant-anchor-link-title:hover,
+.portfolio-anchor .ant-anchor-link-title-active {
+  color: #2ecc8a !important;
 }
