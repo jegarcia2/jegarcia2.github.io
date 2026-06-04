@@ -63,7 +63,6 @@ export default function Navbar() {
           {/* The Portrait: Increased to w-20 h-20 (80px). Since the navbar is only 64px, it automatically overflows! */}
           <div className={`absolute w-35 h-35 rounded-full border-2 border-white/20 bg-[#0B0F19] flex items-center justify-center overflow-hidden transition-all duration-500 transform shadow-xl ${isScrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
             <a
-              href="#"
               className={`absolute w-35 h-35 rounded-full border-2 border-white/20 bg-[#0B0F19] flex items-center justify-center overflow-hidden transition-all duration-500 transform shadow-xl cursor-pointer ${isScrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
                 }`}
               onClick={(e) => {

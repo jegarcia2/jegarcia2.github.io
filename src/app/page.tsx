@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import Experience from '@/components/Experience';
 import Contact from '@/components/Contact';
 
 export default function Home() {
@@ -29,14 +30,7 @@ export default function Home() {
         <Skills />
         <Projects />
 
-        {/* Experience & Education section */}
-        <section id="experience" className="py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-black text-white mb-4">Experience &amp; Education</h2>
-            <p className="text-white/40 text-sm">Coming soon.</p>
-          </div>
-        </section>
-
+        <Experience />
         <Contact />
       </div>
     </main>

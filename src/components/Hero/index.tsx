@@ -64,7 +64,7 @@ export default function Hero() {
       {/* Experience badge */}
       <div className="inline-flex items-center border border-[#2ecc8a] rounded-full px-6 py-2 mb-10">
         <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#2ecc8a]">
-          2 Years Experience
+          3 Years Experience
         </span>
       </div>
 
