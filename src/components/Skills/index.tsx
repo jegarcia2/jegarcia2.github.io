@@ -34,39 +34,39 @@ const categories = [
   {
     label: 'PROGRAMMING & LANGUAGES',
     items: [
-      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', exp: 'Extensive hands-on experience building full-stack Node.js and React applications.' },
-      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6', exp: 'Integrating static typing for safer, more scalable codebases.' },
-      { name: 'Python', icon: SiPython, color: '#3776AB', exp: 'Backend development, data processing, and scripting.' },
-      { name: 'C#', isText: true, text: 'C#', color: '#9B4F96', exp: 'Enterprise software development and object-oriented programming.' },
-      { name: 'Java', icon: FaJava, color: '#007396', exp: 'Object-oriented programming and application development.' },
+      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', exp: 'Hands-on building full-stack Node.js and React applications.' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6', exp: 'Using static typing for safer, more maintainable codebases.' },
+      { name: 'Python', icon: SiPython, color: '#3776AB', exp: 'Scripting, data processing, and general-purpose tasks.' },
+      { name: 'C#', isText: true, text: 'C#', color: '#9B4F96', exp: 'Desktop application development with WinForms and object-oriented programming.' },
+      { name: 'Java', icon: FaJava, color: '#007396', exp: 'Object-oriented programming fundamentals.' },
     ],
   },
   {
     label: 'FRONT END & UI',
     items: [
       { name: 'React', icon: SiReact, color: '#61DAFB', exp: 'Co-developed client portals and built dynamic dashboards for real-time visualization.' },
-      { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF', exp: 'Building highly performant, SEO-optimized routing and SSR applications.' },
+      { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF', exp: 'Building SEO-friendly apps with SSR and file-based routing.' },
       { name: 'HTML5', icon: SiHtml5, color: '#E34F26', exp: 'Semantic markup for accessible web applications.' },
       { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6', exp: 'Modern styling, layouts, and responsive design.' },
-      { name: 'Ant Design', icon: SiAntdesign, color: '#0170FE', exp: 'Rapidly deploying clean, enterprise-grade UI layouts.' },
+      { name: 'Ant Design', icon: SiAntdesign, color: '#0170FE', exp: 'Building clean, consistent UI layouts with a component library.' },
     ],
   },
   {
     label: 'BACKEND & DATA',
     items: [
-      { name: 'Node.js', icon: SiNodedotjs, color: '#339933', exp: 'Building backend services, processing secure data, and managing workflows.' },
-      { name: 'Express', icon: SiExpress, color: '#FFFFFF', exp: 'Developing robust REST APIs and handling server-side routing.' },
-      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', exp: 'Advanced relational database management and data integrity.' },
-      { name: 'MySQL', icon: SiMysql, color: '#4479A1', exp: 'Designing relational database schemas and writing optimized SQL queries.' },
+      { name: 'Node.js', icon: SiNodedotjs, color: '#339933', exp: 'Building backend services and REST APIs.' },
+      { name: 'Express', icon: SiExpress, color: '#FFFFFF', exp: 'Building REST APIs and handling server-side routing.' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', exp: 'Relational database design with a focus on data integrity.' },
+      { name: 'MySQL', icon: SiMysql, color: '#4479A1', exp: 'Designing relational schemas and writing SQL queries.' },
     ],
   },
   {
     label: 'TOOLS, QA & CLOUD',
     items: [
       { name: 'Git/GitHub', icon: SiGithub, color: '#FFFFFF', exp: 'Shipped enhancements using clear tickets, PRs, and release notes.' },
-      { name: 'Cypress', icon: SiCypress, color: '#17202C', exp: 'Introduced E2E unit testing, reducing QA rework and accelerating delivery cycles.' },
-      { name: 'ESLint', icon: SiEslint, color: '#4B32C3', exp: 'Implemented automated code quality checks to ensure maintainability.' },
-      { name: 'AWS', icon: FaAws, color: '#FF9900', exp: 'Cloud infrastructure, deployments, and certified AWS DevOps.' },
+      { name: 'Cypress', icon: SiCypress, color: '#17202C', exp: 'Added end-to-end and unit tests, reducing QA rework.' },
+      { name: 'ESLint', icon: SiEslint, color: '#4B32C3', exp: 'Automated code-quality checks to keep code maintainable.' },
+      { name: 'AWS', icon: FaAws, color: '#FF9900', exp: 'EC2 deployments and AWS DevOps certification (40h).' },
       { name: 'PowerBI', isText: true, text: 'PBI', color: '#F2C811', exp: 'Data visualization and business intelligence reporting.' },
     ]
   },

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-const langRow1 = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Python'];
-const langRow2 = ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'Git'];
+const langRow1 = ['JavaScript', 'TypeScript', 'Python', 'C#', 'Java'];
+const langRow2 = ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'MySQL', 'Git'];
 
 export default function Hero() {
   return (
@@ -64,7 +64,7 @@ export default function Hero() {
       {/* Experience badge */}
       <div className="inline-flex items-center border border-[#2ecc8a] rounded-full px-6 py-2 mb-10">
         <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#2ecc8a]">
-          3 Years Experience
+          2+ Years Experience
         </span>
       </div>
 
